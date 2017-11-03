@@ -1,0 +1,51 @@
+@import 'variables';
+
+.footer {
+  &-container {
+    padding: 5em 3em 2em 3em;
+    background: $footer-color-top; //Older browsers
+    background: linear-gradient(to bottom, $footer-color-top 50%, $footer-color-bottom);
+  }
+  &-navigation {
+    text-align: center;
+  }
+  &-heading {
+    color: $text-light;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    &.active {
+      font-weight: bold;
+    }
+  }
+  @at-root hr#{&}-divider {
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-top: 1px $text-light solid;
+    margin: 2em 0;
+  }
+  &-area {
+    display: flex;
+    flex-direction: column;
+    &--title {
+      @extend .footer-heading;
+      font-weight: bold;
+      margin-bottom: 2.5em;
+    }
+    &--body {
+      color: $text-light;
+      line-height: 2em;
+      font-size: 0.7em;
+    }
+  }
+  @at-root img#{&}-logo {
+    width: 100%;
+    height: auto;
+  }
+  &-contact {
+    display: flex;
+    justify-content: space-between;
+  }
+}

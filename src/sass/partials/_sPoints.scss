@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'mixins';
+
+.sPoints {
+  margin-top: 9em;
+  & .col-md-4 {
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+  }
+}
+
+.sPoint {
+  &-container {
+
+    @include drop-shadow($shadow-size--small);
+    background-color:#FFF;
+    //padding-left: 0.35em;
+    //padding-right: 0.35em;
+  //  padding: 1.2em 2em;
+    padding:1.2em 1.5em;
+    text-align: center;
+    height: 17em;
+    & h2 {
+      margin-top: 0;
+      font-size: 1em;
+    }
+    & p {
+    font-size: 0.8em;
+      line-height: 1.3em;
+      padding: 1em 0;
+    }
+  }
+  &-img{
+    max-height: 20px;
+  }
+  &-graphics {
+    &--trust-widget img{
+    max-width: 100%;
+    }
+    &--user-name {
+      font-weight: bold;
+      font-size: 0.8em;
+      padding-bottom: $padding/2;
+    }
+    &--user-date{
+      font-size: 0.7em
+    }
+    &--control{
+     margin: 0.5em 0;
+      color: $sPoints-control;
+      & .fa-circle.active {
+        color: $sPoints-control--active;
+        font-size:0.4em;
+      }
+      & .fa-circle{
+        font-size: 0.25em;
+       margin: 0 1em;
+      }
+    }
+    &--2-logos {
+     margin-top: 3em;
+      display: flex;
+      justify-content: center;
+    }
+    &--logo {
+      padding: 0.4em;
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

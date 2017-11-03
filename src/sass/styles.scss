@@ -1,0 +1,17 @@
+@import '../../node_modules/normalize.css/normalize';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/helpers';
+@import 'partials/layout';
+@import 'partials/landingImg';
+@import 'partials/header';
+@import 'partials/cta';
+@import 'partials/sPoints';
+@import 'partials/features';
+@import 'partials/footer';
+@import 'partials/lightbox';
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  color: $text-dark;
+}

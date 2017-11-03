@@ -1,0 +1,28 @@
+@import 'variables';
+
+.header {
+  padding: $padding;
+  &-logo--img {
+    max-height: $padding*3;
+  }
+  &-like {
+    &--btn {
+      height: 20px;
+      width: 80px;
+      font-size: 0.6em;
+      background-color: $button-color--like;
+      color: $text-light;
+      border: none;
+      border-radius: $rounded-corner-radius;
+      font-weight: 100;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+    &--thumb {
+      height: 0.9em;
+    }
+  }
+}
+

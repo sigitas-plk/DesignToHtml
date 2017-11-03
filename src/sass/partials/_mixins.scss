@@ -1,0 +1,5 @@
+@import 'variables';
+
+@mixin drop-shadow($size) {
+  box-shadow: 2px 2px $size 0 rgba(0, 0, 0, $shadow-transparency);
+}

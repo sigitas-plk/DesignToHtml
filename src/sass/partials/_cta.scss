@@ -1,0 +1,84 @@
+@import 'variables';
+@import 'mixins';
+
+.cta {
+  &-area {
+    text-align: center;
+    &--button {
+      background-color: $accent-color;
+      width: 90%;
+      margin: $padding;
+      padding: $padding*1.5 0;
+      border: none;
+      color: $text-light;
+      font-weight: bold;
+      @include drop-shadow($shadow-size--big);
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 42px;
+        background: rgba(255, 255, 255, 0.3);
+        transition: all 0.1s ease;
+      }
+      &:hover {
+        cursor: pointer;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+    &--text {
+      margin-bottom: 0;
+      font-size: 0.8em;
+    }
+  }
+  &-text {
+    margin: $padding*2 $padding*6;
+    line-height: 1.5em;
+    text-align: center;
+  }
+  &-container {
+    background-color: rgba(256, 256, 256, 0.95);
+    padding: $padding*3 0 $padding*3 $padding*3;
+    border-left: 7px $cta-container-border solid;
+    @include drop-shadow(5px);
+    & p {
+      margin-top: 0;
+    }
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $cta-container-border;
+      margin-left: -27px;
+    }
+  }
+  &-select {
+    & select {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $accent-color;
+      box-shadow: none;
+      background: transparent;
+      font-size: 0.8em;
+      font-weight: 600;
+      color: $text-dark;
+      appearance: none;
+      padding-top:1.5em;
+    }
+    &:after {
+      content: '\f107';
+      font-family: FontAwesome;
+      font-weight: bold;
+      font-style: normal;
+      margin-left: -18px;
+      text-decoration: none;
+    }
+  }
+}

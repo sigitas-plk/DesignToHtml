@@ -1,0 +1,34 @@
+@import 'variables';
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  // transition: all .2s ease-out; //If transitions via CSS
+  z-index: 10;
+  filter: alpha(opacity=70);
+}
+#lightbox {
+  //display:none;
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  background: #fff;
+  z-index: 11;
+}
+.lightbox {
+  align-items: center;
+  &-area {
+    line-height: 2em;
+    font-size: 0.7em;
+  }
+  &-btn {
+    @extend .cta-area--button;
+  }
+}
+

@@ -1,0 +1,10 @@
+.landing {
+  &-background {
+    background-color:#E0E0E0;
+    background: url('/img/background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 500px;
+  }
+}
